@@ -1,0 +1,38 @@
+<html>
+
+	<head>
+	<script language='javascript'>
+		window.onload = function() {
+			var div = document.getElementById('QRCode');
+			if(div != null) {
+				div.style.display = 'block';	
+			} else {
+				div = document.createElement('div');
+				div.setAttribute('style', 'position:absolute;top:30%;left:40%;background:#ddf;width:300px;height:300px;z-index:10001;display:block;');
+				div.setAttribute('id', 'QRCode');
+	
+				var img = document.createElement('img');
+				img.setAttribute('src', 'http://chart.apis.google.com/chart?cht=qr&chl=' + encodeURIComponent(location.href) + '&chs=250x250');
+				img.setAttribute('alt', 'QR Code of the page\'s link');
+				img.setAttribute('style', 'margin: 25px;margin-top:10px;');
+
+				var close = document.createElement('a');
+				close.textContent = '[x]';
+				close.setAttribute('style', 'color:blue;float:right;cursor:pointer;');
+				close.setAttribute('href', 'javascript:document.getElementById(\'QRCode\').style.display=\'none\';void(0);');
+
+				div.appendChild(close);			
+				div.appendChild(img);
+				document.body.appendChild(div);
+
+			}	
+
+	
+
+		};
+	</script>
+	</head>
+	<body>
+		<h1>Tada!!</h1>
+	</body>
+</html>
