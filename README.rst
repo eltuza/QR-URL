@@ -10,7 +10,8 @@ Only tested in Firefox 3.6 and Chrome 11. May work in other browsers and version
 Installing
 -------------
 
-You can drag this bookmarklet_ right to your browser bookmars bar to try it out.
+You should create a new page in your browser's bookmark panel, and set the contents of the bookmarklet file as URL. 
+Then, every time you click the bookmarklet when you arae on a page, a QRCode will pop up, which will point to the current tab's URL.
 
 TODO
 -----
